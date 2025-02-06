@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-3">Cook List</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>First name</th>
+                <th>Years of Experience</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cook in cooks %}
+            <tr>
+                <td>{{ cook.username }}</td>
+                <td>{{ cook.first_name }}</td>
+                <td>{{ cook.years_of_experience }}</td>
+                <td>
+                    <a href="{{ cook.get_absolute_url }}" class="btn btn-info btn-sm">
+                      View
+                    </a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3" class="text-center">No cooks available.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
