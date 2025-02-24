@@ -1,0 +1,183 @@
+[
+{
+    "model": "kitchen.dishtype",
+    "pk": 1,
+    "fields": {
+        "name": "pasta"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 2,
+    "fields": {
+        "name": "soup"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 3,
+    "fields": {
+        "name": "salad"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 4,
+    "fields": {
+        "name": "dessert"
+    }
+},
+{
+    "model": "kitchen.dishtype",
+    "pk": 5,
+    "fields": {
+        "name": "drinks"
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$CUnocaUyxiFghFR9DYn72F$0HE9nGqrtNc9vH3vx0zZhLk8aYNtf6I2scehB9xGKOs=",
+        "last_login": "2025-02-06T14:35:41.663Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-02-05T20:42:46Z",
+        "years_of_experience": 7,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$tylTWbjrQM0mmetOSvuUn2$9ahLgAb4BEaQT5WzjnsfxAvLt6NPgi1uWAlkSYdruqA=",
+        "last_login": "2025-02-06T14:04:07Z",
+        "is_superuser": true,
+        "username": "qwe",
+        "first_name": "",
+        "last_name": "",
+        "email": "qwe@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-02-06T14:03:55Z",
+        "years_of_experience": 4,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 3,
+    "fields": {
+        "password": "chef",
+        "last_login": "2025-02-04T00:00:00Z",
+        "is_superuser": false,
+        "username": "Marco",
+        "first_name": "Marco",
+        "last_name": "Cervetti",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-06T14:23:00Z",
+        "years_of_experience": 3,
+        "groups": [],
+        "user_permissions": [
+            26,
+            27,
+            28
+        ]
+    }
+},
+{
+    "model": "kitchen.cook",
+    "pk": 4,
+    "fields": {
+        "password": "chef",
+        "last_login": "2025-02-05T06:00:00Z",
+        "is_superuser": false,
+        "username": "Polo",
+        "first_name": "Marco",
+        "last_name": "Polo",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-06T14:24:40Z",
+        "years_of_experience": 2,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 1,
+    "fields": {
+        "name": "carbonara",
+        "description": "pasta carbonara",
+        "price": "11.00",
+        "dish_type": 3,
+        "cooks": [
+            1
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 2,
+    "fields": {
+        "name": "BooleanYon",
+        "description": "chichen broth",
+        "price": "8.50",
+        "dish_type": 2,
+        "cooks": [
+            3
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 3,
+    "fields": {
+        "name": "Ceasar's salad",
+        "description": "Famous salad",
+        "price": "15.00",
+        "dish_type": 3,
+        "cooks": [
+            1,
+            4
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 4,
+    "fields": {
+        "name": "Ice-Cream",
+        "description": "perfect dessert",
+        "price": "5.50",
+        "dish_type": 4,
+        "cooks": [
+            3
+        ]
+    }
+},
+{
+    "model": "kitchen.dish",
+    "pk": 5,
+    "fields": {
+        "name": "Coke zero",
+        "description": "Healthy Cola",
+        "price": "3.00",
+        "dish_type": 5,
+        "cooks": [
+            4
+        ]
+    }
+}
+]

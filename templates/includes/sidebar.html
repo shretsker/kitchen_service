@@ -1,0 +1,34 @@
+<ul class="sidebar-nav list-group">
+  {% if user.is_authenticated %}
+    <li class="list-group-item">
+      User:
+      <a href="{{ user.get_absolute_url }}" class="custom-btn">
+        {{ user.get_username }}
+      </a>
+    </li>
+    <li class="list-group-item">
+      <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.path }}">
+        <button type="submit" class="custom-btn">Logout</button>
+      </form>
+    </li>
+  {% else %}
+    <li class="list-group-item">
+      <a href="{% url 'login'%}?next={{request.path}}" class="custom-btn">Login</a>
+    </li>
+  {% endif %}
+  <br>
+  <li class="list-group-item">
+    <a href="{% url 'kitchen:index' %}" class="custom-btn">Home</a>
+  </li>
+  <li class="list-group-item">
+    <a href="{% url 'kitchen:dishes' %}" class="custom-btn">Dish List</a>
+  </li>
+  <li class="list-group-item">
+    <a href="{% url 'kitchen:dish-types' %}" class="custom-btn">Dish Types</a>
+  </li>
+  <li class="list-group-item">
+    <a href="{% url 'kitchen:cook-list' %}" class="custom-btn">Cook List</a>
+  </li>
+</ul>

@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ dish_type.name }}</h2>
+<a href="{% url 'kitchen:dish-type-update' pk=dish_type.id %}" class="custom-btn">Edit</a>
+<a href="{% url 'kitchen:dish-type-delete' pk=dish_type.id %}" class="custom-btn">Delete</a>
+<a href="{% url 'kitchen:dish-types' %}" class="custom-btn">Back</a>
+{% endblock %}
