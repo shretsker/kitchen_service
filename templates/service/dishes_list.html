@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Dish List</h1>
+<a style="float: revert" href="{% url 'kitchen:dish-create' %}" class="custom-btn">ADD</a>
+<ul>
+    {% for dish in dishes %}
+    <li>
+        <a style="float: revert" href="{% url 'kitchen:dish-detail' pk=dish.id %}">
+          <strong>{{ dish.name }}</strong>
+        </a> - {{ dish.price }} UAH.
+        <a style="float: right" href="{% url 'kitchen:dish-update' pk=dish.id %}"
+           class="custom-btn">Update
+        </a>
+        <a style="float: right" href="{% url 'kitchen:dish-delete' pk=dish.id %}"
+           class="custom-btn">Delete
+        </a>
+    </li>
+    <hr>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>{% if object %}Update{% else %}Create{% endif %} Cook</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="custom-btn">Save</button>
+  </form>
+  <a href="{% url 'kitchen:cook-list' %}" class="custom-btn">Cancel</a>
+{% endblock %}
